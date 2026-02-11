@@ -145,7 +145,7 @@ function toggleLibraryProducts() { libraryShowingAll = !libraryShowingAll; displ
 function toggleGroceryProducts() { groceryShowingAll = !groceryShowingAll; displayGroceryProducts(groceryShowingAll); }
 
 function showAlert(productName) {
-    alert(`📞 বিস্তারিত জানতে কল করুন: ০১৯৭৮৮৯৯৬২৩\nপণ্য: ${productName}\nআমরা ২৪/৭ সেবা দিচ্ছি।`);
+    alert(`📞 বিস্তারিত জানতে কল করুন: ০১৯৭৮৮৯৯৬২৩\nপণ্য: ${productName}\nআমরা সকাল ১০টা – রাত ১০টা পর্যন্ত সেবা দিচ্ছি।`);
 }
 
 function scrollToSection(sectionId) {
