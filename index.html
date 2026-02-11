@@ -2,139 +2,173 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি | কাউন্দিয়া বাজার</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="top-bar d-none d-lg-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt me-1"></i> কাউন্দিয়া বাজার, সাভার</span>
+                <span class="ms-3"><i class="fas fa-clock me-1"></i> সকাল ১০টা – রাত ১০টা</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="tel:01978899623" class="me-3"><i class="fas fa-phone-alt me-1"></i> ০১৯৭৮৮৯৯৬২৩</a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="ms-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-store me-2"></i>ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি
+            <a class="navbar-brand" href="#home">
+                <img src="./images/Logo.png" alt="Logo" class="brand-logo me-2">
+                <span class="brand-text">ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">হোম</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#library">লাইব্রেরী</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#grocery">গ্রোসারি</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#printing">প্রিন্টিং</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#application">অনলাইন আবেদন</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">আমাদের সম্পর্কে</a>
-                    </li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">হোম</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#library">লাইব্রেরী</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#grocery">গ্রোসারি</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#printing">প্রিন্টিং</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#application">অনলাইন আবেদন</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">যোগাযোগ</a></li>
                 </ul>
+                <div class="nav-actions d-flex align-items-center">
+                    <div class="search-wrapper me-3 d-none d-md-block">
+                        <i class="fas fa-search search-icon" id="navbarSearchIcon"></i>
+                        <input type="text" class="form-control search-input" id="navbarSearchInput" placeholder="পণ্য খুঁজুন...">
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <section id="home" class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 fade-in">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 hero-content fade-in">
+                    <span class="hero-tagline">📚 আপনার বিশ্বস্ত ডিজিটাল স্টেশন</span>
                     <h1 class="hero-title">ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</h1>
-                    <p class="lead">সকল ধরনের অনলাইন আবেদন, কালার ও ব্ল্যাক প্রিন্ট, ছবি প্রিন্ট, ফটোকপি, স্ক্যানিং, মোবাইল ব্যাংকিং এবং মোবাইল রিচার্জ সুবিধা পাওয়া যায়। এছাড়াও এখানে লাইব্রেরি ও স্টেশনারি সামগ্রী এবং বিভিন্ন খাদ্যদ্রব্য/মুদি আইটেম পাওয়া যায়।</p>
-                    <a href="#library" class="btn btn-warning btn-lg mt-3">
-                        <i class="fas fa-shopping-basket me-2"></i>আমাদের পণ্য দেখুন
-                    </a>
+                    <p class="hero-description">সকল ধরনের অনলাইন আবেদন, কালার/ব্ল্যাক প্রিন্ট, ফটোকপি, মোবাইল ব্যাংকিং, রিচার্জ — পাশাপাশি লাইব্রেরি ও মুদিপণ্যের অভিজাত সংগ্রহ।</p>
+                    <div class="hero-search d-flex mt-4">
+                        <input type="text" class="form-control hero-search-input" id="heroSearchInput" placeholder="আপনি কী খুঁজছেন? (বই, চাল, প্রিন্ট...)">
+                        <button class="btn btn-warning hero-search-btn" id="heroSearchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="hero-badges mt-3">
+                        <span class="badge bg-light text-dark me-2"><i class="fas fa-check-circle text-success me-1"></i> নির্ভরযোগ্য</span>
+                        <span class="badge bg-light text-dark me-2"><i class="fas fa-tag text-warning me-1"></i> সাশ্রয়ী</span>
+                        <span class="badge bg-light text-dark"><i class="fas fa-clock text-info me-1"></i> ৭ দিন খোলা</span>
+                    </div>
                 </div>
                 <div class="col-lg-6 fade-in">
-                    <div class="text-center">
-                        <img src="./images/2.png" class="img-fluid rounded shadow" alt="Shop Image" style="max-height: 450px;">
+                    <div class="hero-image-wrapper">
+                        <img src="./images/2.png" class="img-fluid hero-main-img" alt="Our Shop">
+                        <div class="hero-offer-badge">সকাল ১০টা – রাত ১০টা</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 bg-light">
+    <section id="searchResultsSection" class="py-5" style="display: none; background: #fafcff;">
         <div class="container">
-            <div class="section-header">
-                <h2>আমাদের সেবাসমূহ</h2>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="section-header text-start mb-0">
+                    <h2 class="mb-1"><i class="fas fa-search me-2"></i>অনুসন্ধানের ফলাফল</h2>
+                    <p class="text-muted" id="resultCountText">মোট ০টি পণ্য পাওয়া গেছে</p>
+                </div>
+                <button class="btn btn-outline-secondary rounded-pill" id="clearSearchBtn"><i class="fas fa-times me-2"></i>সার্চ বন্ধ করুন</button>
             </div>
-            
+            <div class="row g-4" id="searchResultsContainer"></div>
+        </div>
+    </section>
+
+    <section class="categories-section py-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>আমাদের সেবাসমূহ</h2>
+                <p class="text-muted">দ্রুত, সাশ্রয়ী ও আস্থার সাথে</p>
+            </div>
             <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card" onclick="scrollToSection('library')">
-                        <div class="service-icon">
+                <div class="col-md-3 col-6">
+                    <div class="category-card" onclick="scrollToSection('library')">
+                        <div class="category-icon bg-soft-blue">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h4>লাইব্রেরী</h4>
-                        <p>বই, খাতা, কলম, স্টেশনারি সামগ্রী ইত্যাদি</p>
+                        <h5>লাইব্রেরী</h5>
+                        <span class="category-count">১০০+ পণ্য</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card" onclick="scrollToSection('grocery')">
-                        <div class="service-icon">
+                <div class="col-md-3 col-6">
+                    <div class="category-card" onclick="scrollToSection('grocery')">
+                        <div class="category-icon bg-soft-green">
                             <i class="fas fa-shopping-basket"></i>
                         </div>
-                        <h4>গ্রোসারি</h4>
-                        <p>বিভিন্ন প্রকার খাদ্যদ্রব্য ও মুদিপণ্য</p>
+                        <h5>গ্রোসারি</h5>
+                        <span class="category-count">১৫০+ পণ্য</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card" onclick="scrollToSection('printing')">
-                        <div class="service-icon">
+                <div class="col-md-3 col-6">
+                    <div class="category-card" onclick="scrollToSection('printing')">
+                        <div class="category-icon bg-soft-orange">
                             <i class="fas fa-print"></i>
                         </div>
-                        <h4>প্রিন্টিং</h4>
-                        <p>কালার, ব্ল্যাক-হোয়াইট প্রিন্ট, ফটোকপি</p>
+                        <h5>প্রিন্টিং</h5>
+                        <span class="category-count">১০+ সেবা</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card" onclick="scrollToSection('application')">
-                        <div class="service-icon">
+                <div class="col-md-3 col-6">
+                    <div class="category-card" onclick="scrollToSection('application')">
+                        <div class="category-icon bg-soft-purple">
                             <i class="fas fa-file-signature"></i>
                         </div>
-                        <h4>অনলাইন আবেদন</h4>
-                        <p>সকল ধরনের অনলাইন ফর্ম পূরণ ও আবেদন</p>
+                        <h5>অনলাইন আবেদন</h5>
+                        <span class="category-count">১৫+ সেবা</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="library" class="py-5">
+    <section id="library" class="py-5 product-section">
         <div class="container">
-            <div class="section-header">
-                <h2>লাইব্রেরী ও স্টেশনারি পণ্য</h2>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="section-header text-start mb-0">
+                    <h2 class="mb-1">📖 লাইব্রেরী ও স্টেশনারি</h2>
+                    <p class="text-muted">খাতা, কলম, পেন্সিল ও আরও অনেক কিছু</p>
+                </div>
+                <span class="product-count-badge">মোট ২৬টি পণ্য</span>
             </div>
-            
             <div class="row g-4" id="library-products-container"></div>
-            
-            <div class="text-center mt-4">
-                <button id="library-toggle-btn" class="btn btn-primary btn-lg toggle-btn" onclick="toggleLibraryProducts()">
+            <div class="text-center mt-5">
+                <button id="library-toggle-btn" class="btn btn-outline-primary toggle-btn" onclick="toggleLibraryProducts()">
                     আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="grocery" class="py-5 bg-light">
+    <section id="grocery" class="py-5 product-section bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2>গ্রোসারি পণ্য</h2>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="section-header text-start mb-0">
+                    <h2 class="mb-1">🛒 গ্রোসারি পণ্য</h2>
+                    <p class="text-muted">চাল, তেল, মসলা, বিস্কুট, জুস</p>
+                </div>
+                <span class="product-count-badge">মোট ২০টি পণ্য</span>
             </div>
-            
             <div class="row g-4" id="grocery-products-container"></div>
-            
-            <div class="text-center mt-4">
-                <button id="grocery-toggle-btn" class="btn btn-primary btn-lg toggle-btn" onclick="toggleGroceryProducts()">
+            <div class="text-center mt-5">
+                <button id="grocery-toggle-btn" class="btn btn-outline-primary toggle-btn" onclick="toggleGroceryProducts()">
                     আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>
                 </button>
             </div>
@@ -143,101 +177,92 @@
 
     <section id="printing" class="py-5">
         <div class="container">
-            <div class="section-header">
-                <h2>প্রিন্টিং সেবা</h2>
+            <div class="section-header text-center">
+                <h2>🖨️ প্রিন্টিং ও ডিজিটাল সেবা</h2>
+                <p class="text-muted">মানসম্মত প্রিন্ট, ফটোকপি, স্ক্যান — মোবাইল ব্যাংকিং ও রিচার্জ</p>
             </div>
-            
-            <div class="row mb-5">
+            <div class="row g-4 mb-5">
                 <div class="col-md-4">
-                    <div class="equipment-img">
-                        <img src="./images/Printing/Computer.png" alt="Computer">
-                        <div class="p-3 bg-white text-center">
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <img src="./images/Printing/Computer.png" alt="Computer">
+                        </div>
+                        <div class="equipment-info">
                             <h5>কম্পিউটার</h5>
-                            <p>অনলাইন আবেদন ও ডিজাইনের জন্য</p>
+                            <p>অনলাইন আবেদন ও ডিজাইন</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="equipment-img">
-                        <img src="./images/Printing/Printer.jpg" alt="Printer">
-                        <div class="p-3 bg-white text-center">
+                    <div class="equipment-card">
+                        <div class="equipment-img-wrapper">
+                            <img src="./images/Printing/Printer.jpg" alt="Printer">
+                        </div>
+                        <div class="equipment-info">
                             <h5>প্রিন্টার</h5>
-                            <p>উচ্চমানের কালার, ব্ল্যাক-হোয়াইট প্রিন্ট ও ফটোকপি</p>
+                            <p>কালার / ব্ল্যাক প্রিন্ট</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="equipment-img">
-                        <img src="./images/Printing/Photocopy Machine.png" alt="Photocopy Machine">
-                        <div class="p-3 bg-white text-center">
-                            <h5>ফটোকপি মেশিন</h5>
-                            <p style="color: red;">Coming Soon</p>
-                            <p>দ্রুত ও স্পষ্ট ফটোকপির জন্য</p>
+                    <div class="equipment-card coming-soon">
+                        <div class="equipment-img-wrapper">
+                            <img src="./images/Printing/Photocopy%20Machine.png" alt="Photocopy Machine">
+                        </div>
+                        <div class="equipment-info">
+                            <h5>ফটোকপি মেশিন <span class="badge bg-warning text-dark ms-2">Coming soon</span></h5>
+                            <p>দ্রুত ও স্পষ্ট ফটোকপি</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-12">
-                    <div class="pricing-table">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="pricing-card h-100">
                         <div class="pricing-header">
                             <h4><i class="fas fa-print me-2"></i>প্রিন্টিং মূল্য তালিকা</h4>
                         </div>
                         <div class="pricing-body" id="printing-prices"></div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="alert alert-info">
-                        <h5><i class="fas fa-info-circle me-2"></i>অন্যান্য সেবা</h5>
-                        <p class="mb-4">মোবাইল ব্যাংকিং, মোবাইল রিচার্জ ও অন্যান্য ডিজিটাল সেবাও এখানে পাওয়া যায়। বিস্তারিত জানতে সরাসরি যোগাযোগ করুন।</p>
-                        
-                        <!-- Mobile Banking Section -->
-                        <div class="mb-4">
-                            <h6 class="fw-bold mb-3">মোবাইল ব্যাংকিং সেবা:</h6>
-                            <div class="d-flex flex-wrap gap-3 align-items-center">
-                                <div class="mobile-service-item">
-                                    <img src="./images/Bkash.jpg" alt="bKash" class="mobile-service-logo">
-                                    <span class="mobile-service-name">bKash</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Nagad.png" alt="Nagad" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Nagad</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Rocket.png" alt="Rocket" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Rocket</span>
-                                </div>
+                <div class="col-lg-5">
+                    <div class="digital-services-card h-100">
+                        <h5 class="mb-3"><i class="fas fa-mobile-alt me-2"></i>মোবাইল ব্যাংকিং</h5>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <div class="service-icon-item">
+                                <img src="./images/Bkash.jpg" alt="bKash">
+                                <span>bKash</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Nagad.png" alt="Nagad">
+                                <span>Nagad</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Rocket.png" alt="Rocket">
+                                <span>Rocket</span>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Recharge Section -->
-                        <div>
-                            <h6 class="fw-bold mb-3">মোবাইল রিচার্জ সেবা:</h6>
-                            <div class="d-flex flex-wrap gap-3 align-items-center">
-                                <div class="mobile-service-item">
-                                    <img src="./images/Recharge/Grameen.jpg" alt="Grameenphone" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Grameenphone</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Recharge/Banglalink.png" alt="Banglalink" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Banglalink</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Recharge/Robi.png" alt="Robi" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Robi</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Recharge/Airtel.png" alt="Airtel" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Airtel</span>
-                                </div>
-                                <div class="mobile-service-item">
-                                    <img src="./images/Recharge/Teletalk.png" alt="Teletalk" class="mobile-service-logo">
-                                    <span class="mobile-service-name">Teletalk</span>
-                                </div>
+                        <h5 class="mb-3"><i class="fas fa-wifi me-2"></i>মোবাইল রিচার্জ</h5>
+                        <div class="d-flex flex-wrap gap-3">
+                            <div class="service-icon-item">
+                                <img src="./images/Recharge/Grameen.jpg" alt="Grameenphone">
+                                <span>Grameen</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Recharge/Banglalink.png" alt="Banglalink">
+                                <span>Banglalink</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Recharge/Robi.png" alt="Robi">
+                                <span>Robi</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Recharge/Airtel.png" alt="Airtel">
+                                <span>Airtel</span>
+                            </div>
+                            <div class="service-icon-item">
+                                <img src="./images/Recharge/Teletalk.png" alt="Teletalk">
+                                <span>Teletalk</span>
                             </div>
                         </div>
                     </div>
@@ -248,16 +273,16 @@
 
     <section id="application" class="py-5 bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2>অনলাইন আবেদন সেবা</h2>
+            <div class="section-header text-center">
+                <h2>📄 অনলাইন আবেদন সেবা</h2>
+                <p class="text-muted">ভর্তি, NID, পাসপোর্ট, ড্রাইভিং লাইসেন্স সহ সবকিছু</p>
+                <span class="badge bg-warning text-dark mt-2 p-2">সার্ভিস চার্জ আলাদা, ওয়েবসাইট ফি প্রযোজ্য</span>
             </div>
-            
-            <div class="row">
-                <div class="col-12">
-                    <div class="pricing-table">
-                        <div class="pricing-header">
-                            <h4><i class="fas fa-file-alt me-2"></i>অনলাইন আবেদন মূল্য তালিকা</h4>
-                            <p style="color: yellow;">নিম্নে বর্ণিত সকল মূল্য শুধুমাত্র সার্ভিস চার্জ; সংশ্লিষ্ট ওয়েবসাইটের নির্ধারিত ফি আলাদা।</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="pricing-card">
+                        <div class="pricing-header bg-gradient">
+                            <h4 class="mb-0"><i class="fas fa-file-alt me-2"></i>আবেদন ফি ও সার্ভিস চার্জ</h4>
                         </div>
                         <div class="pricing-body" id="application-prices"></div>
                     </div>
@@ -268,27 +293,38 @@
 
     <section id="about" class="py-5">
         <div class="container">
-            <div class="section-header">
-                <h2>আমাদের সম্পর্কে</h2>
-            </div>
-            
-            <div class="row align-items-center">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <h3 class="mb-4">ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</h3>
-                    <p>আমরা একটি বহুমুখী সেবা প্রদানকারী প্রতিষ্ঠান। আমাদের লক্ষ্য হল গ্রাহকদের সকল প্রকার ডিজিটাল ও দৈনন্দিন চাহিদা পূরণ করা।</p>
-                    <p>আমাদের বিশেষত্ব হল নির্ভরযোগ্যতা ও স্বল্প মূল্যে সেরা সেবা প্রদান। আমাদের অভিজ্ঞ কর্মীগণ সর্বদাই গ্রাহকদের সেবায় নিয়োজিত থাকেন।</p>
-                    
-                    <div class="mt-4">
-                        <h5>যোগাযোগের ঠিকানা</h5>
-                        <p><i class="fas fa-map-marker-alt text-primary me-2"></i>কাউন্দিয়া বাজার, ঈদগাহ মাঠ সংলগ্ন, মিরপুর, সাভার, ঢাকা</p>
-                        <p><i class="fas fa-phone text-primary me-2"></i>০১৯৭৮৮৯৯৬২৩, ০১৭৮২৫৬৪৫৯১</p>
-                        <p><i class="fas fa-clock text-primary me-2"></i>সকাল ১০টা - রাত ১০টা (সাপ্তাহিক বন্ধ নেই)</p>
-                        <i class="fas fa-map-marker-alt me-2"></i> <a href="https://maps.app.goo.gl/3YBenG38vty39UXXA" target="_blank">লাইভ লোকেশন (ক্লিক করুন)</a>
+                    <div class="about-content">
+                        <span class="about-tagline">🔰 আমাদের সম্পর্কে</span>
+                        <h2 class="about-title">ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</h2>
+                        <p class="about-text">২০১৮ সাল থেকে কাউন্দিয়া বাজারে নির্ভরযোগ্যতা ও সাশ্রয়ী মূল্যে সেবা দিয়ে আসছি। আমাদের লক্ষ্য — ডিজিটাল সেবা ও দৈনন্দিন পণ্য এক ছাদের নিচে।</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>কাউন্দিয়া বাজার, ঈদগাহ মাঠ সংলগ্ন, মিরপুর, সাভার, ঢাকা</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>০১৯৭৮৮৯৯৬২৩, ০১৭৮২৫৬৪৫৯১</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>dlibrary16@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>সকাল ১০টা – রাত ১০টা (সাপ্তাহিক বন্ধ নেই)</span>
+                            </div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/3YBenG38vty39UXXA" target="_blank" class="btn btn-outline-primary mt-3"><i class="fas fa-map-marker-alt me-2"></i>গুগল ম্যাপে দেখুন</a>
+                        <a href="tel:01978899623" class="btn btn-warning btn-lg mt-4 ms-2"><i class="fas fa-headset me-2"></i>কল করুন</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-4">
-                        <img src="./images/Logo.png" class="img-fluid rounded shadow" alt="Our Shop" style="max-height: 400px;">
+                    <div class="about-image-wrapper">
+                        <img src="./images/Logo.png" alt="Shop Logo" class="img-fluid about-img">
+                        <div class="experience-badge">৫+ বছরের অভিজ্ঞতা</div>
                     </div>
                 </div>
             </div>
@@ -297,49 +333,48 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="footer-heading">ডিজিটাল লাইব্রেরী এন্ড গ্রোসারি</h4>
-                    <p>সকল প্রকার ডিজিটাল সেবা, লাইব্রেরী ও গ্রোসারি পণ্যের জন্য আপনার বিশ্বস্ত প্রতিষ্ঠান।</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    <p class="footer-about">সকল প্রকার ডিজিটাল সেবা, লাইব্রেরী ও গ্রোসারি পণ্যের জন্য আপনার বিশ্বস্ত প্রতিষ্ঠান। নির্ভরযোগ্যতা ও সাশ্রয়ী মূল্যের প্রতিশ্রুতি।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-lg-2 col-md-6">
                     <h4 class="footer-heading">দ্রুত লিংক</h4>
-                    <div class="footer-links">
-                        <a href="#home">হোম</a>
-                        <a href="#library">লাইব্রেরী</a>
-                        <a href="#grocery">গ্রোসারি</a>
-                        <a href="#printing">প্রিন্টিং</a>
-                        <a href="#about">আমাদের সম্পর্কে</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#home">হোম</a></li>
+                        <li><a href="#library">লাইব্রেরী</a></li>
+                        <li><a href="#grocery">গ্রোসারি</a></li>
+                        <li><a href="#printing">প্রিন্টিং</a></li>
+                        <li><a href="#about">যোগাযোগ</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="footer-heading">আমাদের সেবা</h4>
-                    <div class="footer-links">
-                        <a href="#application">অনলাইন আবেদন</a>
-                        <a href="#printing">প্রিন্টিং ও ফটোকপি</a>
-                        <a href="#printing">মোবাইল ব্যাংকিং</a>
-                        <a href="#printing">মোবাইল রিচার্জ</a>
-                        <a href="#printing">স্ক্যানিং</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#application">অনলাইন আবেদন</a></li>
+                        <li><a href="#printing">প্রিন্টিং ও ফটোকপি</a></li>
+                        <li><a href="#printing">মোবাইল ব্যাংকিং</a></li>
+                        <li><a href="#printing">মোবাইল রিচার্জ</a></li>
+                        <li><a href="#printing">স্ক্যানিং</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4 class="footer-heading">যোগাযোগ</h4>
-                    <div class="footer-links">
-                        <p><i class="fas fa-map-marker-alt me-2"></i>কাউন্দিয়া বাজার, ঈদগাহ মাঠ সংলগ্ন, মিরপুর, সাভার, ঢাকা</p>
-                        <p><i class="fas fa-phone me-2"></i>০১৯৭৮৮৯৯৬২৩, ০১৭৮২৫৬৪৫৯১</p>
-                        <p><i class="fas fa-envelope me-2"></i>dlibrary16@gmail.com</p>
-                        <a href="https://maps.app.goo.gl/3YBenG38vty39UXXA" target="_blank">লাইভ লোকেশন (ক্লিক করুন)</a>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">যোগাযোগ করুন</h4>
+                    <div class="contact-form">
+                        <input type="text" class="form-control mb-2" placeholder="আপনার নাম">
+                        <input type="email" class="form-control mb-2" placeholder="ইমেইল">
+                        <textarea class="form-control mb-2" rows="3" placeholder="বার্তা"></textarea>
+                        <button class="btn btn-warning mt-2">পাঠান</button>
                     </div>
                 </div>
             </div>
-            
             <div class="copyright">
-                <p>&copy; 2026 Digital Library and Grocery | All Rights Reserved</p>
+                <p>&copy; 2026 Digital Library and Grocery . All Rights Reserved</p>
             </div>
         </div>
     </footer>
