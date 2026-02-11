@@ -1,4 +1,3 @@
-
 const libraryProducts = [
     { id: 1, name: "ফ্রেশ খাতা", price: "55 টাকা", img: "./images/Library/Fresh Khata.jpg" },
     { id: 2, name: "মেটাডোর হাই স্কুল", price: "5 টাকা", img: "./images/Library/Matador Hi School.jpg" },
@@ -19,7 +18,7 @@ const libraryProducts = [
     { id: 17, name: "পেট্রা রঙ পেন্সিল ১৩পিছ", price: "২০০ টাকা", img: "./images/Library/Petra Colour 13.jpg" },
     { id: 18, name: "ডোমস রঙ পেন্সিল ১২পিছ", price: "৮০ টাকা", img: "./images/Library/Doms Colour 12.jpg" },
     { id: 19, name: "ফ্রেশ প্লাস্টিক স্কেল (ছট/বড়)", price: "১৫/২০ টাকা", img: "./images/Library/Plastic Scale.jpg" },
-    { id: 10, name: "ফেভিকল সাদা", price: "২০ টাকা", img: "./images/Library/Fevicol Whitw.jpg" },
+    { id: 20, name: "ফেভিকল সাদা", price: "২০ টাকা", img: "./images/Library/Fevicol Whitw.jpg" },
     { id: 21, name: "ফেভিকল ক্লিয়ার", price: "২৫ টাকা", img: "./images/Library/Fevicol Water.webp" },
     { id: 22, name: "কস্টিপ", price: "৫০ টাকা", img: "./images/Library/Kostip.jpg" },
     { id: 23, name: "মেটাডোর ফাইল", price: "২০ টাকা", img: "./images/Library/Matador File.jpg" },
@@ -48,7 +47,7 @@ const groceryProducts = [
     { id: 17, name: "হুইল গুড়া সাবান আধা-কেজি/এক-কেজি", price: "৭৫/১৪৫ টাকা", img: "./images/Grocery/wheel-washing-powder-2-in-1-clean-fresh-500-gm.jpg" },
     { id: 18, name: "ভিম বার ১২৫গ্রাম/ ৩০০গ্রাম", price: "১৫/৪০ টাকা", img: "./images/Grocery/Vim bar.jpg" },
     { id: 19, name: "গ্লিটার ডিশ ওয়াশ Refill 250ml", price: "৭০ টাকা", img: "./images/Grocery/Glitter.jpg" },
-    { id: 20, name: "সুইফট টয়লেট ক্লিনার 500ml", price: "১১৫ টাকা", img: "./images/Grocery/Swift.webp" },
+    { id: 20, name: "সুইফট টয়লেট ক্লিনার 500ml", price: "১১৫ টাকা", img: "./images/Grocery/Swift.webp" }
 ];
 
 const printingPrices = [
@@ -58,37 +57,38 @@ const printingPrices = [
     { service: "রঙিন প্রিন্ট (এক পৃষ্ঠা)", price: "১০ টাকা" },
     { service: "ছবি প্রিন্ট (৪পিছ)", price: "৪০ টাকা" },
     { service: "ছবি প্রিন্ট (৪পিছ এডিট সহ)", price: "৫০ টাকা" },
-    { service: "স্ক্যানিং (এক পৃষ্ঠা)", price: "১০ টাকা" },
+    { service: "স্ক্যানিং (এক পৃষ্ঠা)", price: "১০ টাকা" }
 ];
 
 const applicationPrices = [
     { service: "স্কুল, কলেজ ও বিশ্ববিদ্যালয় ভর্তি আবেদন", price: "200 টাকা" },
-    { service: "ভোটার আইডি কার্ড (NID) আবেদন", price: "৩00 টাকা" },
+    { service: "ভোটার আইডি কার্ড (NID) আবেদন", price: "৩০০ টাকা" },
     { service: "জন্ম নিবন্ধন আবেদন/সংশোধন", price: "২০০ টাকা" },
-    { service: "পাসপোর্ট আবেদন", price: "৫00 টাকা" },
-    { service: "টিন সার্টিফিকেট আবেদন", price: "২০০ টাকা" },
+    { service: "পাসপোর্ট আবেদন", price: "৪০০ টাকা" },
+    { service: "জমির নামজারি", price: "৩০০ টাকা" },
+    { service: "জমির কর প্রদান", price: "১০০ টাকা" },
+    { service: "টিন সার্টিফিকেট আবেদন", price: "১৫০ টাকা" },
     { service: "ড্রাইভিং লাইসেন্স আবেদন", price: "৩০০ টাকা" },
-    { service: "অনলাইন GD", price: "২০০ টাকা" },
-    { service: "পত্রিকায় বিজ্ঞাপনের আবেদন", price: "২০০ টাকা" },
+    { service: "অনলাইন GD", price: "১৫০ টাকা" },
+    { service: "পত্রিকায় বিজ্ঞাপনের আবেদন", price: "১৫০ টাকা" },
     { service: "বাস এবং ট্রেনের টিকেট কাটা", price: "৫০ টাকা" }
 ];
-
 
 let libraryShowingAll = false;
 let groceryShowingAll = false;
 
-
 function createProductCard(product) {
     return `
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 col-lg-3">
             <div class="card product-card">
-                <img src="${product.img}" class="card-img-top" alt="${product.name}">
+                <img src="${product.img}" class="card-img-top" alt="${product.name}" loading="lazy"
+                     onerror="this.onerror=null; this.src='./images/placeholder.jpg'">
                 <div class="card-body">
                     <h5 class="product-title">${product.name}</h5>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center mt-2">
                         <span class="product-price">${product.price}</span>
-                        <button class="btn btn-sm btn-outline-primary" onclick="showAlert('${product.name}')">
-                            বিস্তারিত
+                        <button class="btn btn-detail" onclick="showAlert('${product.name}')">
+                            <i class="fas fa-shopping-cart me-1"></i> বিস্তারিত
                         </button>
                     </div>
                 </div>
@@ -97,134 +97,179 @@ function createProductCard(product) {
     `;
 }
 
-
 function displayLibraryProducts(showAll) {
     const container = document.getElementById('library-products-container');
     const toggleBtn = document.getElementById('library-toggle-btn');
-    
     if (!container) return;
-    
     container.innerHTML = '';
-    
-    const productsToShow = showAll ? libraryProducts : libraryProducts.slice(0, 6);
-    
-    productsToShow.forEach(product => {
-        container.innerHTML += createProductCard(product);
-    });
-    
-    if (showAll) {
-        toggleBtn.innerHTML = 'আরও কম দেখুন <i class="fas fa-arrow-up ms-2"></i>';
-        toggleBtn.classList.add('show-all');
-    } else {
-        toggleBtn.innerHTML = 'আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>';
-        toggleBtn.classList.remove('show-all');
-    }
+    const productsToShow = showAll ? libraryProducts : libraryProducts.slice(0, 8);
+    productsToShow.forEach(product => container.innerHTML += createProductCard(product));
+    toggleBtn.innerHTML = showAll 
+        ? 'আরও কম দেখুন <i class="fas fa-arrow-up ms-2"></i>' 
+        : 'আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>';
+    toggleBtn.classList.toggle('show-all', showAll);
 }
-
 
 function displayGroceryProducts(showAll) {
     const container = document.getElementById('grocery-products-container');
     const toggleBtn = document.getElementById('grocery-toggle-btn');
-    
     if (!container) return;
-    
     container.innerHTML = '';
-    
-    const productsToShow = showAll ? groceryProducts : groceryProducts.slice(0, 6);
-    
-    productsToShow.forEach(product => {
-        container.innerHTML += createProductCard(product);
-    });
-    
-    if (showAll) {
-        toggleBtn.innerHTML = 'আরও কম দেখুন <i class="fas fa-arrow-up ms-2"></i>';
-        toggleBtn.classList.add('show-all');
-    } else {
-        toggleBtn.innerHTML = 'আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>';
-        toggleBtn.classList.remove('show-all');
-    }
+    const productsToShow = showAll ? groceryProducts : groceryProducts.slice(0, 8);
+    productsToShow.forEach(product => container.innerHTML += createProductCard(product));
+    toggleBtn.innerHTML = showAll 
+        ? 'আরও কম দেখুন <i class="fas fa-arrow-up ms-2"></i>' 
+        : 'আরও পণ্য দেখুন <i class="fas fa-arrow-down ms-2"></i>';
+    toggleBtn.classList.toggle('show-all', showAll);
 }
-
 
 function displayPrintingPrices() {
     const container = document.getElementById('printing-prices');
-    if (!container) return;
-    
-    container.innerHTML = '';
-    
-    printingPrices.forEach(item => {
-        const priceItem = document.createElement('div');
-        priceItem.className = 'pricing-item';
-        priceItem.innerHTML = `
-            <span>${item.service}</span>
-            <span class="fw-bold text-primary">${item.price}</span>
-        `;
-        container.appendChild(priceItem);
-    });
-}
-
-
-function displayApplicationPrices() {
-    const container = document.getElementById('application-prices');
-    if (!container) return;
-    
-    container.innerHTML = '';
-    
-    applicationPrices.forEach(item => {
-        const priceItem = document.createElement('div');
-        priceItem.className = 'pricing-item';
-        priceItem.innerHTML = `
-            <span>${item.service}</span>
-            <span class="fw-bold text-primary">${item.price}</span>
-        `;
-        container.appendChild(priceItem);
-    });
-}
-
-
-function toggleLibraryProducts() {
-    libraryShowingAll = !libraryShowingAll;
-    displayLibraryProducts(libraryShowingAll);
-}
-
-
-function toggleGroceryProducts() {
-    groceryShowingAll = !groceryShowingAll;
-    displayGroceryProducts(groceryShowingAll);
-}
-
-
-function showAlert(productName) {
-    alert(`বিস্তারিত জানতে আমাদের ফোন করুন: ০১৯৭৮৮৯৯৬২৩\nপণ্য: ${productName}`);
-}
-
-
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
+    if (container) {
+        container.innerHTML = printingPrices.map(item => 
+            `<div class="pricing-item"><span>${item.service}</span><span class="fw-bold text-primary">${item.price}</span></div>`
+        ).join('');
     }
 }
 
+function displayApplicationPrices() {
+    const container = document.getElementById('application-prices');
+    if (container) {
+        container.innerHTML = applicationPrices.map(item => 
+            `<div class="pricing-item"><span>${item.service}</span><span class="fw-bold text-success">${item.price}</span></div>`
+        ).join('');
+    }
+}
+
+function toggleLibraryProducts() { libraryShowingAll = !libraryShowingAll; displayLibraryProducts(libraryShowingAll); }
+function toggleGroceryProducts() { groceryShowingAll = !groceryShowingAll; displayGroceryProducts(groceryShowingAll); }
+
+function showAlert(productName) {
+    alert(`📞 বিস্তারিত জানতে কল করুন: ০১৯৭৮৮৯৯৬২৩\nপণ্য: ${productName}\nআমরা ২৪/৭ সেবা দিচ্ছি।`);
+}
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function performSearch(query) {
+    if (!query.trim()) {
+        clearSearch();
+        return;
+    }
+    const lowerQuery = query.toLowerCase().trim();
+    const allProducts = [...libraryProducts, ...groceryProducts];
+    const results = allProducts.filter(product => 
+        product.name.toLowerCase().includes(lowerQuery)
+    );
+    
+    const resultsSection = document.getElementById('searchResultsSection');
+    const resultsContainer = document.getElementById('searchResultsContainer');
+    const resultCountText = document.getElementById('resultCountText');
+    
+    if (results.length === 0) {
+        resultCountText.innerText = 'দুঃখিত, কোনো পণ্য পাওয়া যায়নি';
+        resultsContainer.innerHTML = '<div class="col-12 text-center py-5"><i class="fas fa-search fa-3x text-muted mb-3"></i><h5>কিছু পাওয়া যায়নি</h5><p class="text-muted">অন্য কিওয়ার্ড দিয়ে চেষ্টা করুন</p></div>';
+    } else {
+        resultCountText.innerText = `মোট ${results.length}টি পণ্য পাওয়া গেছে`;
+        resultsContainer.innerHTML = results.map(product => createProductCard(product)).join('');
+    }
+    
+    resultsSection.style.display = 'block';
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function clearSearch() {
+    const resultsSection = document.getElementById('searchResultsSection');
+    if (resultsSection) resultsSection.style.display = 'none';
+    const navbarInput = document.getElementById('navbarSearchInput');
+    const heroInput = document.getElementById('heroSearchInput');
+    if (navbarInput) navbarInput.value = '';
+    if (heroInput) heroInput.value = '';
+}
+
+function initSearch() {
+    const navbarInput = document.getElementById('navbarSearchInput');
+    const navbarIcon = document.getElementById('navbarSearchIcon');
+    
+    if (navbarInput) {
+        navbarInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch(this.value);
+            }
+        });
+        navbarInput.addEventListener('input', function(e) {
+            if (this.value.trim() === '') {
+                clearSearch();
+            }
+        });
+    }
+    if (navbarIcon) {
+        navbarIcon.addEventListener('click', function() {
+            const input = document.getElementById('navbarSearchInput');
+            if (input) performSearch(input.value);
+        });
+    }
+    
+    const heroInput = document.getElementById('heroSearchInput');
+    const heroBtn = document.getElementById('heroSearchBtn');
+    
+    if (heroInput) {
+        heroInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch(this.value);
+            }
+        });
+        heroInput.addEventListener('input', function(e) {
+            if (this.value.trim() === '') {
+                clearSearch();
+            }
+        });
+    }
+    if (heroBtn) {
+        heroBtn.addEventListener('click', function() {
+            const input = document.getElementById('heroSearchInput');
+            if (input) performSearch(input.value);
+        });
+    }
+    
+    const clearBtn = document.getElementById('clearSearchBtn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearSearch);
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     displayLibraryProducts(false);
     displayGroceryProducts(false);
-    
-
     displayPrintingPrices();
     displayApplicationPrices();
     
-
-    document.querySelectorAll('.service-card').forEach(card => {
-        const target = card.getAttribute('data-target');
-        if (target) {
-            card.addEventListener('click', function() {
-                scrollToSection(target);
-            });
-        }
+    initSearch();
+    
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const target = this.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+            if (target) scrollToSection(target);
+        });
+    });
+    
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let scrollY = window.pageYOffset + 120;
+        sections.forEach(sec => {
+            const height = sec.offsetHeight;
+            const top = sec.offsetTop - 100;
+            const id = sec.getAttribute('id');
+            if (scrollY > top && scrollY <= top + height) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
+                });
+            }
+        });
     });
 });
