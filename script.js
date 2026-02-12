@@ -74,6 +74,92 @@ const applicationPrices = [
     { service: "বাস এবং ট্রেনের টিকেট কাটা", price: "৫০ টাকা" }
 ];
 
+const bengaliToLatinMap = {
+    'অ':'o','আ':'a','ই':'i','ঈ':'i','উ':'u','ঊ':'u','ঋ':'ri','এ':'e','ঐ':'oi','ও':'o','ঔ':'ou',
+    'ক':'k','খ':'kh','গ':'g','ঘ':'gh','ঙ':'ng','চ':'ch','ছ':'chh','জ':'j','ঝ':'jh','ঞ':'n',
+    'ট':'t','ঠ':'th','ড':'d','ঢ':'dh','ণ':'n','ত':'t','থ':'th','দ':'d','ধ':'dh','ন':'n',
+    'প':'p','ফ':'f','ব':'b','ভ':'bh','ম':'m','য':'j','র':'r','ল':'l','শ':'sh','ষ':'sh','স':'s','হ':'h',
+    'ড়':'r','ঢ়':'r','য়':'y',
+    'া':'a','ি':'i','ী':'i','ু':'u','ূ':'u','ৃ':'ri','ে':'e','ৈ':'oi','ো':'o','ৌ':'ou',
+    '্':'','ং':'ng','ঃ':'h','ঁ':'n'
+};
+
+const bengaliToEnglishDict = {
+    'খাতা': 'note khata',
+    'কলম': 'pen kolom',
+    'পেন্সিল': 'pencil',
+    'রাবার': 'eraser rabar',
+    'কাটার': 'cutter katar',
+    'শার্পনার': 'sharpener',
+    'রঙ': 'color rong rong_pencil',
+    'স্কেল': 'scale',
+    'ফাইল': 'file',
+    'ব্যাগ': 'bag',
+    'সুতা': 'thread suta',
+    'চাল': 'rice chal',
+    'লবণ': 'salt lobon',
+    'মসলা': 'spice mosla',
+    'বিরিয়ানি': 'biriyani',
+    'বার-বি-কিউ': 'bbq',
+    'রোস্ট': 'roast',
+    'নুডুলস': 'noodles',
+    'মুড়ি': 'muri',
+    'চিড়া': 'chira',
+    'তেল': 'oil tel',
+    'বিস্কিট': 'biscuit',
+    'জুস': 'juice',
+    'সাবান': 'soap saban',
+    'ডিশ ওয়াশ': 'dishwash',
+    'টয়লেট': 'toilet',
+    'ক্লিনার': 'cleaner',
+    'ভর্তি': 'admission vorti',
+    'আবেদন': 'application',
+    'ভোটার': 'voter',
+    'পাসপোর্ট': 'passport',
+    'ড্রাইভিং': 'driving',
+    'লাইসেন্স': 'license',
+    'টিকেট': 'ticket',
+    'প্রান': 'pran',
+    'মোল্লা': 'molla',
+    'রাঁধুনী': 'radhuni',
+    'মিঃ': 'mr',
+    'আকিজ': 'akij',
+    'ভিম': 'vim',
+    'সল্ট': 'salt lobon লবন',
+    'গ্লিটার': 'glitter',
+    'সুইফট': 'swift'
+};
+
+function bengaliToLatin(text) {
+    let result = '';
+    for (let char of text) {
+        result += bengaliToLatinMap[char] || char;
+    }
+    return result;
+}
+
+function getEnglishKeywords(bengaliText) {
+    const words = bengaliText.split(/[\s,()\-/]+/); 
+    const translations = new Set();
+    words.forEach(word => {
+        if (bengaliToEnglishDict[word]) {
+            translations.add(bengaliToEnglishDict[word]);
+        }
+    });
+    return Array.from(translations).join(' ');
+}
+
+function generateSearchableText(productName) {
+    const latin = bengaliToLatin(productName);
+    const englishKeywords = getEnglishKeywords(productName);
+    return `${productName} ${latin} ${englishKeywords}`.toLowerCase();
+}
+
+
+libraryProducts.forEach(p => p.searchableText = generateSearchableText(p.name));
+groceryProducts.forEach(p => p.searchableText = generateSearchableText(p.name));
+
+
 let libraryShowingAll = false;
 let groceryShowingAll = false;
 
@@ -153,6 +239,7 @@ function scrollToSection(sectionId) {
     if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+
 function performSearch(query) {
     if (!query.trim()) {
         clearSearch();
@@ -161,7 +248,7 @@ function performSearch(query) {
     const lowerQuery = query.toLowerCase().trim();
     const allProducts = [...libraryProducts, ...groceryProducts];
     const results = allProducts.filter(product => 
-        product.name.toLowerCase().includes(lowerQuery)
+        product.searchableText.includes(lowerQuery)
     );
     
     const resultsSection = document.getElementById('searchResultsSection');
