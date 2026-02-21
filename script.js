@@ -36,7 +36,7 @@ const groceryProducts = [
     { id: 6, name: "মিঃ নুডুলস ৮পিছ", price: "১৭০ টাকা", img: "./images/Grocery/mrnoodles-magic-masala-8pack.jpg" },
     { id: 7, name: "মিঃ নুডুলস ৪পিছ", price: "৫০ টাকা", img: "./images/Grocery/mrnoodles-4pcs.webp" },
     { id: 8, name: "মিঃ নুডুলস (কাপ)", price: "৩৫ টাকা", img: "./images/Grocery/cup-noodles.webp" },
-    { id: 9, name: "আফি মুড়ি (আকিজ) ২০০গ্রাম/৫০০গ্রাম", price: "৩৫/৭০ টাকা", img: "./images/Grocery/Muri.jpg" },
+    { id: 9, name: "আফি মুড়ি (আকিজ) ২৫০গ্রাম/৫০০গ্রাম", price: "৩৫/৭০ টাকা", img: "./images/Grocery/Muri.jpg" },
     { id: 10, name: "আকিজ চিড়া ২০০গ্রাম/৫০০গ্রাম", price: "৪০/৭৫ টাকা", img: "./images/Grocery/Chira.jpg" },
     { id: 11, name: "আকিজ সরিষার তেল 50ml", price: "25 টাকা", img: "./images/Grocery/Mustard-oil-80-ml.jpg" },
     { id: 12, name: "পটাটা বিস্কিট", price: "৩০ টাকা", img: "./images/Grocery/Potata.jpg" },
